@@ -15,7 +15,7 @@ adminSchema.pre('save', function(next){
 });
 
 adminSchema.method('authenticate', function(pwd) {
-  return crypto.createHash('md5').update(pwd).digest("hex") === this.password;
+  return icrypto.createHash('md5').update(pwd).digest("hex") === this.password;
 });
 
 
